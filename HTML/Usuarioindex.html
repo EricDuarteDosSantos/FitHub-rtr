@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/lib/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/usuario_index.css">
+</head>
+<body>
+    <section class="maneger-page-section">
+        <div class="container page-maneger">
+            <div class="logo-container text-center mt-3 mb-3">
+                <img src="assets/images/About/FitHub.jpg" class="img-fluid" alt="Logo" style="width: 70px; height: 70px; margin-right: 10px;">
+            </div>
+            <div class="add-user-button">
+                <h1 class="section-title cliente-title-maneger">Gerenciamento de Usuários</h1>
+                <br />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group mb-4">
+                            <input id="filtro" type="text" class="form-control" placeholder="Pesquisar Produtos..." aria-label="Filtrar" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <button class="btn btn-dark btn-lg" onclick="" data-bs-toggle="modal" data-bs-target="#InserirUsuario" style="color: #f1751b;">
+                            <i class="fa fa-plus"></i> Adicionar Cliente
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="table-container table-responsive">
+                <table id="TbClientes" class="table">
+                    <colgroup>
+                        <col class="tc-nome">
+                    </colgroup>
+                    <thead>
+                        <tr style="color: white;">
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Senha</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Tipo de Usuário</th>
+                            <th class="editar">Editar</th>
+                            <th class="excluir">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Exemplo de linha, substituir por dados dinâmicos -->
+                        <tr id="1" style="color: white;">
+                            <td>1</td>
+                            <td>Nome Exemplo</td>
+                            <td>Senha123</td>
+                            <td>exemplo@teste.com</td>
+                            <td>(11) 1111-1111</td>
+                            <td><span>Administrador</span></td>
+                            <td class="text-center">
+                                <button class="btn btn-default" onclick="definirEdt('1', 'Nome Exemplo', 'exemplo@teste.com', 'Senha123', 'Administrador', '(11) 1111-1111')" data-bs-toggle="modal" data-bs-target="#EditarUsuario" style="color: rgb(15, 15, 15);">
+                                    <i class="fa fa-edit" style="color: orange;"></i>
+                                </button>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-default" onclick="definirExc('1', 'Nome Exemplo', 'exemplo@teste.com', '(11) 1111-1111')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario">
+                                    <i class="fa fa-trash text-danger"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <section class="container text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <div>
+                    <button type="button" id="send-button2" class="nav-link active btn btn-danger btn-block" style="flex: 1; margin-left: 5px;" onclick="window.location.href = 'index.html';">
+                        Voltar
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Modais -->
+        <div class="modal fade" id="EditarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #f1751b; color: white; border-color: #b42079;">
+                        <h1 class="modal-title" id="exampleModalLabel">Editar Cliente</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <p style="color: #ac0404;">Campos com * vermelho são obrigatórios</p>
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    <input id="EditNome" type="text" class="form-control" placeholder="Digite o nome do cliente">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>*</label>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    <input id="EditSenha" type="text" class="form-control" placeholder="Digite a senha">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>*</label>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-md-7">
+                                    <input id="EditEmail" type="email" class="form-control" placeholder="Digite o email">
+                                </div>
+                                <div class="col-md-5">
+                                    <label>*</label>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    <input id="EditTel" type="text" class="form-control" placeholder="Digite o telefone">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>*</label>
+                                </div>
+                            </div>
+                            <input type="hidden" id="IdEdt" value="">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-danger" onclick="AlterarUsuario()">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="ExcluirUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #f0614e; color: white; border-color: #eea236;">
+                        <h1 class="modal-title" id="exampleModalLabel">Excluir Cliente</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="ExcNome">Nome</label>
+                                <input type="text" id="ExcNome" class="form-control" placeholder="Digite seu nome..." readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ExcEmail">Email</label>
+                                <input type="email" id="ExcEmail" class="form-control" placeholder="Digite seu email..." readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ExcTel">Telefone</label>
+                                <input type="text" id="ExcTel" class="form-control" placeholder="Digite seu telefone..." readonly>
+                            </div>
+                            <input type="hidden" id="IdExc" class="form-control" readonly>
+                        </form>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-danger" onclick="ExcluirUsuario()">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="InserirUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #f1751b; color: white; border-color: #eea236;">
+                        <h1 class="modal-title" id="exampleModalLabel">Adicionar Cliente</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <p style="color: #ac0404;">Campos com * vermelho são obrigatórios</p>
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    <input id="Nome" type="text" class="form-control" placeholder="Digite o nome do cliente">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>*</label>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    <input id="Senha" type="password" class="form-control" placeholder="Digite a senha">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>*</label>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-md-7">
+                                    <input id="Email" type="email" class="form-control" placeholder="Digite o email">
+                                </div>
+                                <div class="col-md-5">
+                                    <label>*</label>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    <input id="Tel" type="text" class="form-control" placeholder="Digite o telefone">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>*</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-danger" onclick="AdicionarUsuario()">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

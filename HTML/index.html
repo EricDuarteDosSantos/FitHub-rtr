@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Elora | Personal Portfolio</title>
+
+    <!-- Font-Awesome CSS -->
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.css" />
+
+    <!-- Magnific-Popup CSS -->
+    <link rel="stylesheet" href="assets/vendors/magnific-popup/magnific-popup.css" />
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        padding: 8px;
+        border-radius: 3%;
+        right: 0; /* Alinha o submenu à direita */
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 7px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;     
+        margin: 1px; /* Adiciona a margem */
+        border-radius: 3%;
+    }
+    
+    .dropdown-content a:hover {                
+        color: blue;
+        background-color: #DFDFDE;       
+        border:#d88e1e solid 2px;
+        border-radius: 3%;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    
+    </style>
+</head>
+
+<body>
+
+
+    <!-------------------- Scroll-Top Area (Start) -------------------->
+    <a href="#home" class="scroll-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-------------------- Scroll-Top Area (End) -------------------->
+
+
+
+    <!-------------------- Header Area (Start) -------------------->
+    <header class="header">
+
+        <!-- Logo -->
+        <a class="logo" href="#home" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="assets/images/About/FitHub.jpg" alt="About-Image"
+                style="width: 50px; height: 50px; margin-right: 10px;">
+            <h2 style="margin: 0; font-size: 24px;">FitHub</h2>
+        </a>
+
+        <!-- Logo End -->
+
+        <!-- Navbar -->
+        <nav class="navbar" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <span style="display: flex; align-items: center; margin-right: 20px;">
+                <i class="fas fa-home fa-lg" aria-hidden="true" style="color: white;"></i>
+                <a href="#home" style="margin-left: 10px;">Inicio</a>
+            </span>
+
+            <span style="display: flex; align-items: center; margin-right: 20px;">
+                <i class="fas fa-info-circle fa-lg" aria-hidden="true" style="color: white;"></i>
+                <a href="#about" style="margin-left: 10px;">sobre</a>
+            </span>
+
+            <span style="display: flex; align-items: center; margin-right: 20px;">
+                <i class="fas fa-gavel fa-lg" aria-hidden="true" style="color: white;"></i>
+                <a href="#service" style="margin-left: 10px;">Serviço</a>
+            </span>
+
+            <span style="display: flex; align-items: center; margin-right: 20px;">
+                <i class="fas fa-window-restore fa-lg" aria-hidden="true" style="color: white;"></i>
+                <a href="#portfolio" style="margin-left: 10px;">Portfolio</a>
+            </span>
+
+            <span style="display: flex; align-items: center; margin-right: 20px;">
+                <i class="fa fa-users fa-lg" aria-hidden="true" style="color: white;"></i>
+                <a href="#testimonial" style="margin-left: 10px;">Depoimento</a>
+            </span>
+
+            <span style="display: flex; align-items: center; margin-right: 20px;">
+                <i class="fa fa-file fa-lg" aria-hidden="true" style="color: white;"></i>
+                <a href="#blog" style="margin-left: 10px;">Noticias</a>
+            </span>
+
+            <span style="display: flex; align-items: center; margin-right: 20px;">
+                <i class="fa fa-phone-square fa-lg" aria-hidden="true" style="color: white;"></i>
+                <a href="#contact" style="margin-left: 10px;">Contato</a>
+            </span>
+            <div class="dropdown" style="position: relative; display: inline-block;">
+                <span style="display: flex; align-items: center; margin-right: 20px;">
+                    <i class="fa fa-user" aria-hidden="true" style="color: white;"></i>
+                    <a href="Login.html" style="margin-left: 10px;">Login</a>
+                </span>
+                <div class="dropdown-content"
+                    style="display: none; position: absolute; background-color: #0f1e29c0;; width: 200px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; padding: 8px; border-radius: 3%;">
+                    <a href="Usuarioindex.html"
+                        style=" padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-users" aria-hidden="true" style="margin-right: 8px;"></i>
+                        Usuarios
+                    </a>
+                    <a href="Agendamentoindex.html"
+                        style=" padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 8px;"></i>
+                        Agendamento Admin
+                    </a>
+                    <a href="AgendamentoUsuarioindex.html"
+                        style=" padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-address-book" aria-hidden="true"style="margin-right: 8px;"></i>
+                        Agendamento Usuário
+                    </a>
+                    <a href="CadastroAgendamento.html"
+                        style="padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-book" aria-hidden="true"style="margin-right: 8px;"></i>
+                        Cadastro Agendamento
+                    </a>
+                    <a href="Servicoindex.html"
+                        style="padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-book" aria-hidden="true"style="margin-right: 8px;"></i>
+                        Serviços
+                    </a>
+                    <a href="#logout"
+                        style="padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-folder-open" aria-hidden="true"style="margin-right: 8px;"></i>
+                        Relatório
+                    </a>
+                </div>
+            </div>
+            <!-- Menubar -->
+            <div class="fas fa-bars" id="menu-btn"></div>
+
+    </header>
+    <!-------------------- Header Area (End) -------------------->
+
+
+
+    <!-------------------- Home Area (Start) -------------------->
+    <section class="home" id="home">
+
+        <div class="box-container">
+
+            <div class="content">
+                <div class="text">
+                    <h2>E aí, bora treinar?</h1>
+                        <h1>Temos <span class="typing-text"></span></h1>
+                        <p>Seja bem-vindo(a) ao FitHub, dentro do site que vai revolucionar sua jornada rumo a uma vida
+                            mais saudável e ativa.
+                            Nossa academia é mais do que um espaço para exercícios físicos,
+                            é um local onde cada detalhe é pensado para proporcionar a melhor experiência de treino e
+                            bem-estar para você.
+                            Neste site, você encontrará todas as informações e recursos necessários para transformar sua
+                            rotina e alcançar seus objetivos de fitness.</p>
+                        <a href="#" class="btn">Contate-me <i class="fas fa-user"></i></a>
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="assets/images/About/FitHub.jpg" alt="Home-Image">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-------------------- Home Area (End) -------------------->
+
+
+
+    <!-------------------- About Area (Start) -------------------->
+    <section class="about" id="about">
+
+        <div class="box-container">
+
+            <div class="image">
+                <img src="assets/images/About/OIG1.jpg" alt="About-Image" />
+            </div>
+
+            <div class="content">
+
+                <h2>Nós somos a FitHub!</h2>
+                <p>Olá! Faça parte da grandiosa academia FitHub, que disponibiliza diversas oportunidades para as
+                    pessoas que
+                    querem crescer e manter uma vida cada vez mais saudável dentro do mundo Academico e Fitness.
+                </p>
+
+                <div class="about-info">
+
+                    <div class="info">
+                        <h4>Idade: <span>18</span></h4>
+                        <h4>Gênero: <span>Masculino</span></h4>
+                        <h4>Linguagem: <span>Português, Inglês.</span></h4>
+                        <h4>Trabalho: <span>Nutricionista Esportivo, Instrutor de Ginástica, Instrutor de
+                                Musculação.</span></h4>
+                        <h4>freelance: <span>Disponível</span></h4>
+
+                    </div>
+
+                    <div class="counting">
+
+                        <div class="box">
+                            <h1 class="count" data-count="4">4+</h1>
+                            <h3>Anos de Experiência</h3>
+                        </div>
+
+                        <div class="box">
+                            <h1 class="count" data-count="100">100+</h1>
+                            <h3>Projetos Realizados</h3>
+                        </div>
+
+                        <div class="box">
+                            <h1 class="count" data-count="80">80+</h1>
+                            <h3>Clientes Satisfeitos</h3>
+                        </div>
+
+                        <div class="box">
+                            <h1 class="count" data-count="20">20+</h1>
+                            <h3>Prêmios Ganhos</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="skill-container">
+
+            <div class="heading">
+                <h2>Nossas <span>Habilidades</span></h2>
+            </div>
+
+            <div class="skills">
+                <div class="skill-item item1">
+                    <div class="box">
+                        <h3>Carreira<span> 95% </span> </h3>
+                        <div class="progress-bar"> <span></span> </div>
+                    </div>
+                    <div class="box">
+                        <h3>Profissionalismo<span> 90% </span> </h3>
+                        <div class="progress-bar"> <span></span> </div>
+                    </div>
+                    <div class="box">
+                        <h3>Instrutor de Musculação<span> 85% </span> </h3>
+                        <div class="progress-bar"> <span></span> </div>
+                    </div>
+                </div>
+
+                <div class="skill-item item2">
+                    <div class="box">
+                        <h3>Personal Trainer<span> 75% </span> </h3>
+                        <div class="progress-bar"> <span></span> </div>
+                    </div>
+                    <div class="box">
+                        <h3>Instrutor de Ginástica<span> 65% </span> </h3>
+                        <div class="progress-bar"> <span></span> </div>
+                    </div>
+                    <div class="box">
+                        <h3>Nutricionista Esportivo<span> 60% </span> </h3>
+                        <div class="progress-bar"> <span></span> </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-------------------- About Area (End) -------------------->
+
+
+
+    <!-------------------- Qualification Area (Start) -------------------->
+    <section class="qualification">
+
+        <div class="heading">
+            <h2>Nossas <span>Qualificações</span></h2>
+        </div>
+
+        <div class="box-container">
+
+            <div class="education">
+
+                <div class="experience-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="content">
+                        <span>2015 - 2016</span>
+                        <h3>Profissionalismo</h3>
+                        <p>Tudo começa com a formação e experiência no campo da educação física e gestão esportiva.
+                            Ter um diploma em Educação Física, Administração ou áreas relacionadas é essencial para
+                            adquirir o conhecimento técnico e administrativo necessário.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="content">
+                        <span>2016 - 2017</span>
+                        <h3>Instrutor de Musculação</h3>
+                        <p>O primeiro passo para se tornar um instrutor de musculação é a formação adequada.
+                            Um diploma em Educação Física ou Ciências do Esporte é altamente recomendável,
+                            pois proporciona uma base sólida em anatomia, fisiologia e biologia do exercício.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="content">
+                        <span>2017 - 2018</span>
+                        <h3>Nutricionista Esportivo</h3>
+                        <p>O primeiro passo para se tornar um nutricionista esportivo é obter um diploma em Nutrição.
+                            Após a graduação, é essencial obter o registro no Conselho Regional de Nutricionistas (CRN)
+                            para atuar legalmente.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="experience">
+
+                <div class="experience-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="content">
+                        <span>2018 - 2019</span>
+                        <h3>Empresa Academica em Ginástica</h3>
+                        <p>A criação de uma Empresa Acadêmica dentro de uma academia de ginástica representa uma
+                            poderosa sinergia
+                            entre o conhecimento acadêmico e a aplicação prática. Essa iniciativa visa integrar a
+                            educação formal,
+                            a pesquisa científica e a prática profissional, proporcionando um ambiente de aprendizado
+                            contínuo e
+                            inovação no campo do fitness e do bem-estar.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="content">
+                        <span>2019 - 2020</span>
+                        <h3>Empresa Acadêmica em Musculação</h3>
+                        <p>A criação de uma Empresa Acadêmica especializada em musculação dentro de uma academia
+                            representa uma
+                            iniciativa inovadora que une a pesquisa científica e a prática profissional para elevar os
+                            padrões de
+                            treinamento de força.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="content">
+                        <span>2020 - 2021</span>
+                        <h3>Empresa Academica em Nutricionismo Esportivo</h3>
+                        <p>A criação de uma Empresa Acadêmica especializada em nutrição esportiva dentro de uma academia
+                            representa
+                            uma iniciativa estratégica para combinar conhecimento científico avançado com a aplicação
+                            prática, visando
+                            otimizar a nutrição e o desempenho de atletas e praticantes de atividade física.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-------------------- Qualification Area (End) -------------------->
+
+
+
+    <!-------------------- Services Area (Start) -------------------->
+    <section class="service" id="service">
+
+        <div class="heading">
+            <h2>Nossos <span>Serviços</span></h2>
+        </div>
+
+        <div class="box-container">
+
+            <div class="service-item">
+                <i class="fa fa-heartbeat" aria-hidden="true"style="margin-right: 8px;"></i>
+                <h3>Nutricionista</h3>
+                <p>Para um auxílio profissional na sua alimentação,
+                    gerindo uma dieta saudável e estável.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <i class="fa fa-arrow-up" aria-hidden="true"style="margin-right: 8px;"></i>
+                <h3>Personal Trainer</h3>
+                <p>Treinadores pessoais formados para uma melhor experiência
+                    na sua rotina dentro da academia.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <i class="fa fa-graduation-cap" aria-hidden="true"style="margin-right: 8px;"></i>
+                <h3>Professores Formados</h3>
+                <p>Profissionais na área da educação física prontos para
+                    auxiliar e dar suporte para você!
+                </p>
+            </div>
+
+            <div class="service-item">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Ginástica</h3>
+                <p>Uma área de Ginástica para melhorar sua Flexibilidade, Força e
+                    seu condicionamento físico.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <i class="far fa-file-video"></i>
+                <h3>Equipamento</h3>
+                <p>Equipamentos de alta qualidade para melhor desempenho na hora de treinar.
+                </p>
+            </div>
+
+            <div class="service-item">
+                <i class="fas fa-search-dollar"></i>
+                <h3></h3>
+                <p> Disponibilidade na venda de Equipamentos de Ponta na academia e de proteínas também!.</p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-------------------- Services Area (End) -------------------->
+
+
+
+    <!-------------------- Portfolio Area (Start) -------------------->
+    <section class="portfolio" id="portfolio">
+
+        <div class="heading">
+            <h2>Nosso <span>portfólio</span></h2>
+        </div>
+
+        <div class="gallery">
+
+            <ul class="controls">
+                <li class="button btn active" data-filter="all">Todos</li>
+                <li class="button btn" data-filter="personal-trainer">Personal Trainer</li>
+                <li class="button btn" data-filter="nutrition">Nutricionismo</li>
+                <li class="button btn" data-filter="gymnastics">Ginástica</li>
+            </ul>
+
+            <div class="box-container">
+
+                <div class="portfolio-item image personal-trainer">
+                    <img src="assets/images/Portfolio/th.jpg" alt="Portfolio-Image" />
+                    <div class="content">
+                        <h4>Personal Trainer</h4>
+                        <p>Categoria</p>
+                        <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-1.png"
+                            class="view-btn"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image personal-trainer">
+                    <img src="assets/images/Portfolio/th (1).jpg" alt="Portfolio-Image" />
+                    <div class="content">
+                        <h4>Personal Trainer</h4>
+                        <p>Categoria</p>
+                        <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-2.png"
+                            class="view-btn"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image nutrition">
+                    <img src="assets/images/Portfolio/th (2).jpg" alt="Portfolio-Image" />
+                    <div class="content">
+                        <h4>Nutricionismo</h4>
+                        <p>Categoria</p>
+                        <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-3.png"
+                            class="view-btn"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image nutrition">
+                    <img src="assets/images/Portfolio/th (3).jpg" alt="Portfolio-Image" />
+                    <div class="content">
+                        <h4>Nutricionismo</h4>
+                        <p>Categoria</p>
+                        <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-4.png"
+                            class="view-btn"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item image gymnastics">
+                    <img src="assets/images/Portfolio/th (4).jpg" alt="Portfolio-Image" />
+                    <div class="content">
+                        <h4>Ginástica</h4>
+                        <p>Categoria</p>
+                        <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-5.png"
+                            class="view-btn"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item image gymnastics">
+                    <img src="assets/images/Portfolio/th (5).jpg" alt="Portfolio-Image" />
+                    <div class="content">
+                        <h4>Ginástica</h4>
+                        <p>Categoria</p>
+                        <a data-effect="mfp-newspaper" href="assets/images/Portfolio/portfolio-6.png"
+                            class="view-btn"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-------------------- Portfolio Area (End) -------------------->
+
+
+
+    <!-------------------- Testimonials Area (Start) -------------------->
+    <section class="testimonial" id="testimonial">
+
+        <div class="heading">
+            <h2><span>Depoimentos</span></h2>
+        </div>
+
+        <div class="swiper-container testimonial-slider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide testi-item">
+                    <img src="assets/images/Testimonials/duOz-D8s_400x400.jpg" alt="Depoimento-Pic" />
+
+                    <i class="fas fa-quote-left"></i>
+
+                    <p class="comment">
+                        Treinar na FitHub foi uma experiência transformadora. A equipe é extremamente
+                        profissional e sempre está disponível para ajudar. Recomendo a todos!
+                    </p>
+
+                    <div class="intro">
+                        <h3>Alan</h3>
+                        <h5>Streamer</h5>
+                    </div>
+                </div>
+
+                <div class="swiper-slide testi-item">
+                    <img src="assets/images/Testimonials/Faker_2020_interview.jpg" alt="Depoimento-Pic" />
+
+                    <i class="fas fa-quote-left"></i>
+
+                    <p class="comment">
+                        A FitHub me ajudou a alcançar meus objetivos de fitness com aulas dinâmicas e
+                        motivadoras. Adoro o ambiente acolhedor e amigável.
+                    </p>
+
+                    <div class="intro">
+                        <h3>Faker</h3>
+                        <h5>Streamer</h5>
+                    </div>
+                </div>
+
+                <div class="swiper-slide testi-item">
+                    <img src="assets/images/Testimonials/Xandão.jpg" alt="Depoimento-Pic" />
+
+                    <i class="fas fa-quote-left"></i>
+
+                    <p class="comment">
+                        Como designer gráfico, passo muito tempo sentado. As sessões na FitHub
+                        me ajudaram a melhorar minha postura e minha saúde em geral.
+                    </p>
+
+                    <div class="intro">
+                        <h3>Xandão</h3>
+                        <h5>Último Herói do Mundo</h5>
+                    </div>
+                </div>
+
+                <div class="swiper-slide testi-item">
+                    <img src="assets/images/Testimonials/images.jpg" alt="Depoimento-Pic" />
+
+                    <i class="fas fa-quote-left"></i>
+
+                    <p class="comment">
+                        A variedade de aulas na FitHub é incrível! Sempre encontro algo novo
+                        e desafiador para manter minha rotina de exercícios interessante.
+                    </p>
+
+                    <div class="intro">
+                        <h3>Maethe</h3>
+                        <h5>Streamer</h5>
+                    </div>
+                </div>
+
+                <div class="swiper-slide testi-item">
+                    <img src="assets/images/Testimonials/renato-cariani-disse-que-perdeu-25-mil-seguidores-um-dia-apos-anunciar-live-em-podcast-com-jair-bolsonaro-pl-1661454471500_v2_1x1.jpg"
+                        alt="Depoimento-Pic" />
+
+                    <i class="fas fa-quote-left"></i>
+
+                    <p class="comment">
+                        A FitHub tem equipamentos de ponta e uma equipe muito atenciosa.
+                        Nunca me senti tão motivado a malhar antes!
+                    </p>
+
+                    <div class="intro">
+                        <h3>Renato Cariani</h3>
+                        <h5>Fisiculturista</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination swiper-pagination1"></div>
+
+        </div>
+    </section>
+
+    <!-------------------- Testimonials Area (End) -------------------->
+
+
+
+    <!-------------------- Blog Area (Start) -------------------->
+    <section class="blog" id="blog">
+
+        <div class="heading">
+            <h2>Nosso <span>Blog</span></h2>
+        </div>
+
+        <div class="swiper-container blog-slider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide blog-item">
+                    <div class="image">
+                        <img src="assets/images/Blogs/Quais-sao-os-principais-erros-nutricionais-cometidos-por-atletas-e-como-evita-los.jpg"
+                            alt="Blog-Image" />
+                    </div>
+                    <div class="content">
+                        <div class="intro">
+                            <h5><i class="fas fa-calendar-alt"></i><span>1 de jan, 2022</span></h5>
+                            <h5><i class="fas fa-user"></i><span>por admin</span></h5>
+                        </div>
+                        <a class="main-heading" href="#">Dicas para uma alimentação saudável</a>
+                        <p>Descubra como manter uma alimentação equilibrada e saudável com dicas simples e práticas.</p>
+                        <a href="#" class="btn">leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide blog-item">
+                    <div class="image">
+                        <img src="assets/images/Blogs/Principios-fundamentais-para-alcancar-um-treino-eficiente-de-hipertrofia-2.jpg"
+                            alt="Blog-Image" />
+                    </div>
+                    <div class="content">
+                        <div class="intro">
+                            <h5><i class="fas fa-calendar-alt"></i><span>1 de jan, 2022</span></h5>
+                            <h5><i class="fas fa-user"></i><span>por admin</span></h5>
+                        </div>
+                        <a class="main-heading" href="#">Importância do exercício físico regular</a>
+                        <p>Saiba mais sobre os benefícios do exercício físico e como ele pode melhorar sua qualidade de
+                            vida.</p>
+                        <a href="#" class="btn">leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide blog-item">
+                    <div class="image">
+                        <img src="assets/images/Blogs/Bem-estar-físico-e-mental-com-passos-simples.jpg"
+                            alt="Blog-Image" />
+                    </div>
+                    <div class="content">
+                        <div class="intro">
+                            <h5><i class="fas fa-calendar-alt"></i><span>1 de jan, 2022</span></h5>
+                            <h5><i class="fas fa-user"></i><span>por admin</span></h5>
+                        </div>
+                        <a class="main-heading" href="#">Como manter a motivação nos treinos</a>
+                        <p>Dicas valiosas para manter-se motivado e consistente em sua rotina de exercícios.</p>
+                        <a href="#" class="btn">leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide blog-item">
+                    <div class="image">
+                        <img src="assets/images/Blogs/yoga.jpg" alt="Blog-Image" />
+                    </div>
+                    <div class="content">
+                        <div class="intro">
+                            <h5><i class="fas fa-calendar-alt"></i><span>1 de jan, 2022</span></h5>
+                            <h5><i class "fas fa-user"></i><span>por admin</span></h5>
+                        </div>
+                        <a class="main-heading" href="#">Benefícios do alongamento diário</a>
+                        <p>Entenda como o alongamento diário pode contribuir para sua saúde e bem-estar.</p>
+                        <a href="#" class="btn">leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide blog-item">
+                    <div class="image">
+                        <img src="assets/images/Blogs/Blog-1.jpg" alt="Blog-Image" />
+                    </div>
+                    <div class="content">
+                        <div class="intro">
+                            <h5><i class="fas fa-calendar-alt"></i><span>1 de jan, 2022</span></h5>
+                            <h5><i class="fas fa-user"></i><span>por admin</span></h5>
+                        </div>
+                        <a class="main-heading" href="#">Estratégias para perder peso de forma saudável</a>
+                        <p>Dicas e estratégias eficazes para perder peso de maneira saudável e sustentável.</p>
+                        <a href="#" class="btn">leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination swiper-pagination2"></div>
+
+        </div>
+
+    </section>
+
+    <!-------------------- Blog Area (End) -------------------->
+
+
+
+    <!-------------------- Contact Area (Start) -------------------->
+    <section class="contact" id="contact">
+        <div class="heading">
+            <h2><span>Contato</span> Conosco</h2>
+        </div>
+
+        <div class="box-container">
+            <div class="contact-info">
+                <h3>Entre em Contato</h3>
+                <p>Estamos aqui para ajudar. Entre em contato conosco para mais informações.</p>
+
+                <div class="info-item">
+                    <h4>Telefone:</h4>
+                    <div class="detail">
+                        <div class="fas fa-phone"></div>
+                        <p>+123-456-789</p>
+                    </div>
+                    <div class="detail">
+                        <div class="fas fa-phone"></div>
+                        <p>+111-222-333</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <h4>Email:</h4>
+                    <div class="detail">
+                        <div class="fas fa-envelope"></div>
+                        <p class="gmail"><a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
+                    </div>
+                    <div class="detail">
+                        <div class="fas fa-envelope"></div>
+                        <p class="gmail"><a href="mailto:xyz@gmail.com">xyz@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <h4>LinkedIn:</h4>
+                    <div class="detail">
+                        <div class="fab fa-linkedin"></div>
+                        <p class="linkedin"><a href="https://www.linkedin.com/"
+                                target="_blank">https://www.linkedin.com/</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <h4>GitHub:</h4>
+                    <div class="detail">
+                        <div class="fab fa-github"></div>
+                        <p class="github"><a href="https://github.com/" target="_blank">https://github.com/</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <form method="post" class="contact-form" id="contactUs-Form">
+                <input type="text" name="name" class="box" id="name" placeholder="Nome" required />
+                <input type="email" name="email" class="box" id="email" placeholder="Email" required />
+                <input type="text" name="subject" class="box" id="subject" placeholder="Assunto" required />
+                <textarea cols="30" rows="10" name="comment" id="comment" class="box" placeholder="Mensagem"></textarea>
+                <button type="submit" class="btn" name="submit" id="submit">Enviar Mensagem</button>
+                <span class="alert" id="msg"></span>
+            </form>
+        </div>
+    </section>
+
+
+    <!-------------------- Contact Area (End) -------------------->
+
+
+
+    <!-------------------- Footer Area (Start) -------------------->
+    <footer>
+        <div class="social">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin-in"></a>
+        </div>
+
+        <div class="content">
+            <p>Criado por <span>FitHub</span> | Developer</p>
+        </div>
+    </footer>
+    <!-------------------- Footer Area (End) -------------------->
+
+
+
+    <!-- JQuery -->
+    <script src="assets/vendors/jquery/jquery-3.6.0.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="assets/vendors/swiper/swiper.js"></script>
+
+    <!-- Magnific-Popup JS -->
+    <script src="assets/vendors/magnific-popup/jquery.magnific-popup.js"></script>
+
+    <!-- Typed JS -->
+    <script src="assets/vendors/typed/typed.js"></script>
+
+    <!-- Custom Script File -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/scroll-spy.js"></script>
+    <script src="assets/js/counter-up.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/testi-slider.js"></script>
+    <script src="assets/js/blog-slider.js"></script>
+
+    <!---------------- Custom Script ---------------->
+
+    <!-- Typed Script -->
+    <script>
+        var typed = new Typed('.typing-text', {
+
+            strings: ['Professores Formados', 'Produtos Acadêmicos', 'Auxílio Profissional', 'Sala de Ginástica'],
+            typeSpeed: 120,
+            loop: true
+        });
+    </script>
+
+    <!-- Contact-Form Script -->
+    <script>
+        jQuery('#contactUs-Form').on('submit', function (e) {
+            jQuery('#msg').html('');
+            jQuery('#submit').html('Please wait');
+            jQuery('#submit').attr('disabled', true);
+            jQuery.ajax({
+                url: 'assets/php/submit.php',
+                type: 'post',
+                data: jQuery('#contactUs-Form').serialize(),
+                success: function (result) {
+                    jQuery('#msg').html(result);
+                    jQuery('#submit').html('Submit');
+                    jQuery('#submit').attr('disabled', false);
+                    jQuery('#contactUs-Form')[0].reset();
+                }
+            });
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        // Script to handle the dropdown functionality
+        document.querySelector('.dropdown').addEventListener('mouseover', function () {
+            this.querySelector('.dropdown-content').style.display = 'block';
+        });
+
+        document.querySelector('.dropdown').addEventListener('mouseout', function () {
+            this.querySelector('.dropdown-content').style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>

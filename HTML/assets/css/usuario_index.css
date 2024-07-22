@@ -1,0 +1,71 @@
+body {
+    background-color: #09161f;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px;
+    margin-top: 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #f1751b;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+.table {
+    margin-top: 10px;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.table td .btn {
+    margin: 0 5px;
+}
+
+.modal-header-custom {
+    background-color: #f8f9fa;
+}
+
+.modal-header-warning {
+    background-color: #ffc107;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    padding: 10px 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.text-danger {
+    color: red;
+}
